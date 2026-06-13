@@ -1,0 +1,425 @@
+@import url("../style.css");
+
+#menu{
+  background-image: linear-gradient(#0c2363dd , #4f0c63e3);
+  backdrop-filter: blur(10px);
+  height: calc(100vh - 14px);
+  width: var(--max-width-nav);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  margin: 6px;
+
+  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.314),
+        0 2px 4px rgb(0, 0, 0);
+
+  border: 1px solid #ffffff31;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 98;
+
+}
+
+#menu.snap-animating {
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menu-nav-container {
+  margin: -2px 4px 4px 4px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+   
+  overflow: hidden;
+}
+
+.menu-nav-bar {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  
+  padding: 0 6px 24px 6px; 
+
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+  padding-bottom: 16px;
+  list-style: none;
+  padding: 0;
+    button{
+        background-color: transparent;
+        border: 0;
+        height: 32px;
+        width: 100%;
+    } 
+}
+
+.button-material{
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100%;
+}
+
+.btn-jquery{
+    background-color: transparent !important;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: auto !important;
+    cursor: pointer;
+    display: block;
+
+    .imagen-main{
+        width: 95%;
+        height: auto;
+
+        margin: 4px auto;
+
+        overflow: hidden;        
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: #11338f;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;   
+            object-fit: contain;
+            padding: 6px;
+            display: block;
+        }
+    }
+}
+
+.btn-html{
+    background-color: transparent !important;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: auto !important;
+    cursor: pointer;
+    display: block;
+
+    .imagen-main-html{
+        width: 95%;
+        height: auto;
+
+        margin: 4px auto;
+
+        overflow: hidden;        
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: #11338f;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;   
+            object-fit: contain;
+            padding: 24px;
+            display: block;
+        }
+    }
+}
+
+.btn-css{
+    background-color: transparent !important;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: auto !important;
+    cursor: pointer;
+    display: block;
+
+    .imagen-main-css{
+        width: 95%;
+        height: auto;
+
+        margin: 4px auto;
+
+        overflow: hidden;        
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: #11338f;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;   
+            object-fit: contain;
+            padding: 6px;
+            display: block;
+        }
+    }
+}
+
+.titlebar{
+  z-index: 99;
+  height: 30px;
+
+  color: #fff;
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  touch-action: none;
+  cursor: grab;
+
+  grid-template-columns: auto auto auto;
+  
+  margin: 2px;
+  border-radius: 10px;
+  .title{
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    font-family: var(--main-font);
+  }
+  
+  transition: box-shadow 220ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.scrolled-down {
+    box-shadow: 0 14px 16px -4px rgba(0, 0, 0, 0.694);
+  }
+}
+
+.buttons-nav{
+
+  height: 100%;
+  background-color: #902f2f00;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  text-align: start;
+
+  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.25),
+              0 3px 4px rgba(0, 0, 0, 0.25); 
+
+  transform: scale(1);
+
+  padding: 4px;
+  border: 2px solid transparent;
+
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  h3{
+    font-size: 0.9rem;
+    margin-left: 4px;
+    color: #cac1ff;
+    transition: color 250ms ease-in-out;
+  }
+
+  i{
+    color: #cac1ff;
+    transition: color 250ms ease-in-out;
+  }
+
+  &:hover{
+    border-color: #cac1ff;
+    background-color: #0C2363;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+
+    h3{
+      color: #fff;
+    }
+  }
+
+  &:active{
+    background: #810c81;
+    transform: scale(0.98);
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.buttons-nav::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  opacity: 0;
+  height: 100%;
+  background-image: linear-gradient(var(--active-color-start), var(--active-color-end));
+  border-radius: 0px 8px 8px 0px;
+  transition: opacity 250ms ease-in-out;
+}
+
+.buttons-nav.active{
+
+  background: #11338E;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  h3{
+    color: #fff;
+  }
+
+  i{
+    color: var(--active-color-start);
+  }
+}
+
+.buttons-nav.active::after {
+  opacity: 1;
+}
+
+.resize-handle-bottom-left {
+  background-color: #ffffff00;
+  backdrop-filter: blur(0px);
+
+  color: #fff;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 32px; 
+  height: 32px;        
+  cursor: ns-resize;    
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  i{
+    transform: scale(0.70);
+  }
+
+  &:active{
+      background-color: #5e1e6f;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media(max-width: 850px){
+  .buttons-nav{
+    h3{
+      font-size: 0.8rem;
+    }
+
+    i{
+      color: #cac1ff;
+      transition: color 250ms ease-in-out;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  #menu {
+    /* Fijar abajo cubriendo todo el ancho */
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 64px !important; /* Altura estándar de Material Design */
+    margin: 0 !important;
+    border-radius: 16px 16px 0 0 !important; /* Bordes superiores curvos tipo Material You */
+    
+    /* Desactivar el arrastre de JavaScript en móviles */
+    transform: translateX(0px) !important; 
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    background-image: linear-gradient(#0c2363e3, #22052ce0);
+  }
+
+  /* Ocultamos la barra de arrastre superior y el manejador de resize */
+  .titlebar, 
+  #resize-button {
+    display: none !important;
+  }
+
+  /* Ajustamos los contenedores para que fluyan horizontalmente */
+  .menu-nav-container, 
+  .menu-nav-bar {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    height: 100% !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+
+  .menu-list {
+    flex-direction: row !important; /* De lista vertical a fila horizontal */
+    justify-content: space-around; /* Distribuye los botones equitativamente */
+    align-items: center;
+    height: 100%;
+    padding: 0 8px !important;
+    margin: 0;
+    gap: 0 !important;
+  }
+
+  .menu-list li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* Estilizad de los botones individuales estilo Android app */
+  .buttons-nav {
+    display: flex !important;
+    flex-direction: column !important; /* Icono arriba, texto abajo */
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 2px 0 !important;
+    transform: none !important;
+  }
+
+  /* El micro-texto debajo del icono */
+  .buttons-nav h3 {
+    font-size: 0.7rem !important;
+    margin-left: 0 !important;
+    margin-top: 4px !important;
+    font-weight: 500;
+  }
+
+  /* Ocultar la línea decorativa lateral (after) y cambiarla por un indicador sutil */
+  .buttons-nav::after {
+    top: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 32px !important;
+    height: 3px !important;
+    border-radius: 0 0 4px 4px !important;
+  }
+
+  /* Ocultar sub-paneles flotantes que puedan romper la barra (como los logos de lenguajes) */
+  #selection-home {
+    display: none !important;
+  }
+}

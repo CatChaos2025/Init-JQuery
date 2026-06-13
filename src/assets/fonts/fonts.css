@@ -1,0 +1,70 @@
+/* ==========================================================================
+   IMPORTACIÓN DE FUENTES (@font-face)
+   ========================================================================== 
+*/
+
+/* --- NORMAL / UPRIGHT --- */
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- ITALIC --- */
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-LightItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka-Charon";
+  src: url("./IosevkaCharon-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
