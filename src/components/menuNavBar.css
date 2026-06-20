@@ -288,8 +288,8 @@
 }
 
 .resize-handle-bottom-left {
-  background-color: #ffffff00;
-  backdrop-filter: blur(0px);
+  background-color: #ffffff2d;
+  backdrop-filter: blur(2px);
 
   color: #fff;
   position: absolute;

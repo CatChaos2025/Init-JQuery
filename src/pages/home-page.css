@@ -255,7 +255,6 @@ code {
         width: var(--size-value);
         height: var(--size-value);
 
-
         background-color: rgba(187, 178, 255, 0.174);
         pointer-events: none;
 
